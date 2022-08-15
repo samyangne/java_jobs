@@ -30,15 +30,15 @@ public class LocalCache<T extends Serializable> {
 
 
     public static void main(String[] args) throws IOException {
- /*       BloomFilter stringBloomFilter = new BloomFilter(0.00001,10000000);
-        for (int i = 0; i < 10000000; i++) {
-           String s = "testtest" + i;
-            stringBloomFilter.add(s);
-        }
-        System.out.println(stringBloomFilter.contains("asd"));
-        save("stringBloomFilter", stringBloomFilter);
-*/
-        BloomFilter stringBloomFilter1 = getObject("stringBloomFilter", BloomFilter.class);
+//        BloomFilter stringBloomFilter = new BloomFilter(0.00001,10000000);
+//        for (int i = 0; i < 100; i++) {
+//           String s = "testtestaaaa" + i;
+//            stringBloomFilter.add(s);
+//        }
+//        System.out.println(stringBloomFilter.contains("testtest1"));
+//        save("stringBloomFilter", stringBloomFilter);
+
+        BloomFilter stringBloomFilter1 = getObject("stringBloomFilter0000", BloomFilter.class);
         System.out.println(stringBloomFilter1.contains("testtest1"));
         System.out.println(stringBloomFilter1.contains("testtest"));
 
