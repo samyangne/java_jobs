@@ -10,7 +10,7 @@ public class WeiBoSpider {
     public static void main(String[] args) {
 
         String url = "https://s.weibo.com/top/summary?cate=realtimehot";
-        //这里以我初中学校的网站做示范
+        //这里以我初中学校的网站做示范 
         try{
             String html = HttpUtil.getHttpBody(url);
             System.out.println(html);
