@@ -16,10 +16,23 @@ public class KeyWordUtil {
         set.add("?");
         set.add("？");
         set.add("吗");
+        set.add("哪");
         keyWordSet = Collections.unmodifiableSet(set);
     }
 
+
+    public static Boolean hasKey(String title) {
+        for (String word: keyWordSet) {
+            if (title.contains(word)){
+                return true;
+            }
+        }
+        return false;
+    }
+
+
     public static void main(String[] args) {
-        System.out.println(keyWordSet.contains("？"));
+        System.out.println(hasKey("水水水水"));
+
     }
 }

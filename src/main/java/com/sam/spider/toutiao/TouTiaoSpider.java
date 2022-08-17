@@ -33,11 +33,11 @@ public class TouTiaoSpider {
                             JSONObject jsonObject1 = (JSONObject) jsonArray.get(i);
                             String title = (String) jsonObject1.get("Title");
                             Boolean isExists = stringBloomFilter.contains(title);
-                            if (!StringUtils.isEmpty(title) && !KeyWordUtil.keyWordSet.contains(title) && !isExists) {
+                            if (!StringUtils.isEmpty(title) && !KeyWordUtil.hasKey(title) && !isExists) {
                                 System.out.println("准备发送："+title);
                                 stringBloomFilter.add(title);
                                 LocalCache.save(bloomName,stringBloomFilter);
-                                JavaClient.remoteCall(title);
+                                JavaClient.remoteCall(title+"。");
                                 Thread.sleep(30000);//发一次微博等30秒
                             } else {
                                 System.out.println("已发送过："+title);
