@@ -37,7 +37,7 @@ public class TouTiaoSpider {
                                 System.out.println("准备发送："+title);
                                 stringBloomFilter.add(title);
                                 LocalCache.save(bloomName,stringBloomFilter);
-                                JavaClient.remoteCall(title+"。");
+                                JavaClient.remoteCall("刚刚，"+title+"。");
                                 Thread.sleep(30000);//发一次微博等30秒
                             } else {
                                 System.out.println("已发送过："+title);
@@ -51,7 +51,7 @@ public class TouTiaoSpider {
             } catch (Exception e) {
                 e.printStackTrace();
             }
-            Thread.sleep(1000*60*10);// 每30分钟爬一次
+            Thread.sleep(1000*60*5);// 每30分钟爬一次
         }
     }
 }

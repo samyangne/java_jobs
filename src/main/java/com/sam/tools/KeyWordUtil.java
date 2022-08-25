@@ -17,6 +17,10 @@ public class KeyWordUtil {
         set.add("？");
         set.add("吗");
         set.add("哪");
+        set.add("是否");
+        set.add("中国");
+        set.add("何");
+        set.add("多少");
         keyWordSet = Collections.unmodifiableSet(set);
     }
 
